@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(49, 14, 105);
+    color: rgb(193, 255, 234);
+    height: 48px;
+}
+
+nav ul{
+    /* border: 2px solid green; */
+    list-style-type: none;
+}
+nav ul li h2{
+    font-family: 'Ubuntu Mono', monospace;
+    padding: 8px;
+}
+.gameContainer{
+    /* background-color: bisque; */
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 10.5vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family:Arial, Helvetica, sans-serif;
+    position: relative;
+}
+.box{    
+    cursor: pointer;
+    font-size: 8vw;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(228, 247, 242);
+}
+.gameInfo{
+    margin: 8px 22px;
+    font-family: 'Parisienne', cursive;
+}
+.imgContainer img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right: 0px;
+}
+.bl-0{
+    border-left: 0px;
+}
+.bt-0{
+    border-top: 0px;
+}
+.bb-0{
+    border-bottom: 0px;
+}
+.info{
+    font-size: 24px;
+    font-weight: bolder;
+}
+.btn{
+    cursor: pointer;
+    padding: 3px 15px;
+    margin: 11px;
+    border: 2px solid rgb(15, 15, 15);
+    background-color: rgb(151, 253, 190);
+    border-radius: 11px;
+
+}
+.btn:hover{
+    background-color: rgb(184, 91, 238);
+    border-radius: 17px;
+    border: 2px solid rgb(41, 223, 223);
+    font-weight: bold;
+}
+
+.line{
+    background-color:rgb(6, 250, 189);
+    height: 4px;
+    width:0vw;
+    position:absolute;
+    transition: 1.6s width  ease-out;
+}
+
+@media screen and (max-width: 640px) {
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 35px;
+    }
+    .gameInfo h1{
+        font-size: 24px;
+    }
+    .info{
+        font-size: 17px;
+    }
+    .container{
+        grid-template-columns: repeat(3, 17vw);
+        grid-template-rows: repeat(3, 18vw);
+        
+    }
+    nav ul li{
+        text-align: center;
+    }
+    
+}
