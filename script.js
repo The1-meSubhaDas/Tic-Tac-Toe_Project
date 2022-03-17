@@ -5,7 +5,6 @@ let audioGameOver= new Audio('gameover.mp3');
 let turn ="X";
 let gameOver = false;
 
-
 // Function to Change The Turn
 const ChangeTurn = ()=>{
     return turn === "X"?"0": "X"
@@ -30,11 +29,13 @@ const checkWin = ()=>{
         if((text[e[0]].innerText === text[e[1]].innerText) && (text[e[1]].innerText === text[e[2]].innerText) && (text[e[0]].innerText !== "")){
             document.querySelector('.info').innerText = text[e[0]].innerText + " Won This Match"
             gameOver = true;
+            if(gameOver == true){
+                alert(`${text[e[0]].innerText} has won this match , please click on the "Reset" button or Reload the page to Play again`)
+            }
             document.querySelector('.imgContainer').getElementsByTagName('img')[0].style.width = '170px';
             document.querySelector('.line').style.transform = `translate(${e[3]}vw , ${e[4]}vw) rotate(${e[5]}deg)`;
-            document.querySelector('.line').style.width = "22vw";
+            document.querySelector('.line').style.width = "23vw"; 
             audioGameOver.play();
-            
         }
     })
 }
@@ -72,3 +73,5 @@ reset.addEventListener('click',()=>{
     document.querySelector('.line').style.width = "0vw";
     
 })
+
+

@@ -91,7 +91,7 @@ nav ul li h2{
     transition: 1.6s width  ease-out;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 610px) {
     .gameContainer{
         flex-wrap: wrap;
     }
@@ -112,5 +112,6 @@ nav ul li h2{
     nav ul li{
         text-align: center;
     }
+
     
 }
